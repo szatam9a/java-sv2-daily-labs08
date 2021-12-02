@@ -16,9 +16,7 @@ public class FileReader {
         } catch (IOException io) {
             throw new IllegalStateException("no file to read", io);
         }
-        file.remove(0);
-        file.remove(0);
-        file.remove(file.size() - 1);
+        removeIrrelevantData(file);
         return readIntoData(file);
     }
 
@@ -41,6 +39,11 @@ public class FileReader {
             }
         }
         return resultday;
+    }
+    public void removeIrrelevantData(List<String> file){
+        file.remove(0);
+        file.remove(0);
+        file.remove(file.size() - 1);
     }
 }
 
