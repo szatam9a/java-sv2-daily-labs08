@@ -38,8 +38,8 @@ public class FileReader {
             day = Integer.parseInt(line.substring(2, 4).trim());
             min = Integer.parseInt(line.substring(12, 14));
             max = Integer.parseInt(line.substring(6, 8));
-            if (Math.abs(max - min) < minDiff) {
-                minDiff = Math.abs(max - min);
+            if ((max - min) < minDiff) {
+                minDiff = (max - min);
                 resultday = day;
             }
         }
