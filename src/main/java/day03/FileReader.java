@@ -19,7 +19,12 @@ public class FileReader {
         file.remove(0);
         file.remove(0);
         file.remove(file.size() - 1);
-        int resultday = 0;
+        return readIntoData(file);
+    }
+
+
+    public int readIntoData(List<String> file) {
+        int resultday=0;
         int minDiff = Integer.MAX_VALUE;
         int min;
         int day;
@@ -31,7 +36,7 @@ public class FileReader {
             min = Integer.parseInt(line.substring(12, 14));
             max = Integer.parseInt(line.substring(6, 8));
             if (Math.abs(max - min) < minDiff) {
-                minDiff= Math.abs(max - min);
+                minDiff = Math.abs(max - min);
                 resultday = day;
             }
         }
