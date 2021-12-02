@@ -27,6 +27,7 @@ public class FileReader {
         file.remove(file.size() - 1);
     }
     public int readIntoData(List<String> file) {
+        WeaterData weaterData = new WeaterData();
         int resultday=0;
         int minDiff = Integer.MAX_VALUE;
         int min;
@@ -35,15 +36,10 @@ public class FileReader {
 
         for (String line : file
         ) {
-            day = Integer.parseInt(line.substring(2, 4).trim());
-            min = Integer.parseInt(line.substring(12, 14));
-            max = Integer.parseInt(line.substring(6, 8));
-            if ((max - min) < minDiff) {
-                minDiff = (max - min);
-                resultday = day;
-            }
+            weaterData.readInData(line);
+            weaterData.checkTheDay();
         }
-        return resultday;
+        return weaterData.getResultDay();
     }
 
 }
