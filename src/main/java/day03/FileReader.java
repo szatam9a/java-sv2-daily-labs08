@@ -14,7 +14,7 @@ public class FileReader {
         try {
             file = Files.readAllLines(Path.of(filename));
         } catch (IOException io) {
-            throw new IllegalStateException("nifiletoread", io);
+            throw new IllegalStateException("no file to read", io);
         }
         file.remove(0);
         file.remove(0);
