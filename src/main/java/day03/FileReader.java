@@ -9,7 +9,7 @@ import java.util.List;
 public class FileReader {
 
 
-    public int findSmalestTempertaureSpread(String filename) {
+    public int findSmallestTemperatureSpread(String filename) {
         List<String> file;
         try {
             file = Files.readAllLines(Path.of(filename));
@@ -21,6 +21,11 @@ public class FileReader {
     }
 
 
+    public void removeIrrelevantData(List<String> file){
+        file.remove(0);
+        file.remove(0);
+        file.remove(file.size() - 1);
+    }
     public int readIntoData(List<String> file) {
         int resultday=0;
         int minDiff = Integer.MAX_VALUE;
@@ -40,10 +45,6 @@ public class FileReader {
         }
         return resultday;
     }
-    public void removeIrrelevantData(List<String> file){
-        file.remove(0);
-        file.remove(0);
-        file.remove(file.size() - 1);
-    }
+
 }
 

@@ -9,6 +9,6 @@ class FileReaderTest {
     @Test
     void findSmalestTempertaureSpreadTest() {
         FileReader fl = new FileReader();
-        System.out.println(fl.findSmalestTempertaureSpread("src/test/resources/datamunging/weather.dat"));
+        System.out.println(fl.findSmallestTemperatureSpread("src/test/resources/datamunging/weather.dat"));
     }
 }
