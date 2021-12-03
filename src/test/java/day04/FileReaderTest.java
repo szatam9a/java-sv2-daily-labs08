@@ -1,6 +1,5 @@
-package day03;
+package day04;
 
-import day03.FileReader;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
