@@ -1,6 +1,5 @@
-package week8.day05;
+package day05;
 
-import week8.day04.Position;
 
 import java.util.Arrays;
 import java.util.List;

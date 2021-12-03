@@ -1,13 +1,10 @@
-package week8.day05;
+package day05;
 
-import week8.day04.DataWithDifference;
-import week8.day04.Position;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class AbstractFileReader {

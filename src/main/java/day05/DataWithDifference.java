@@ -1,4 +1,4 @@
-package week8.day05;
+package day05;
 
 public class DataWithDifference {
 
