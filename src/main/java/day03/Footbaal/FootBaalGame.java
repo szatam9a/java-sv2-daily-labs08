@@ -22,11 +22,10 @@ public class FootBaalGame {
 
     public String findSmallestDifferent(Path path) {
         String data = readIn(path).processData();
-        if ( data == null) {
+        if (data == null) {
             throw new IllegalStateException("No winner");
-        }
-        else
-        return data;
+        } else
+            return data;
     }
 
     private String processData() {
@@ -41,8 +40,8 @@ public class FootBaalGame {
             a = Integer.parseInt(line.substring(50, 52));
             team = line.substring(7, 23).trim();
 
-            if ((a - f)  < minDiff) {
-                minDiff = (a - f);
+            if (Math.abs(a - f) < minDiff) {
+                minDiff = Math.abs(a - f);
                 theWinner = team;
             }
         }
